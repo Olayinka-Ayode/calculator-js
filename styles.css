@@ -1,3 +1,112 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open-sans', sans-serif;
+    font-weight: 700;
+    transition: 500ms all ease;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+}
+
+.container{
+    background-color: #000000;
+    height: 584px;
+    /* width: fit-content; */
+    max-width: 300px;
+    /* width: 300px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+}
+
+input{
+    width: 100%;
+    height: 25%;
+    border-radius: 24px;
+}
+
+.first-row th{
+    width: 11.1%;
+    background-color: #A0A0A0;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.second-row th{
+    text-align: center;
+    width: 11.1%;
+    color: #FFFFFF;
+    background-color: #313131;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.third-row th{
+    text-align: center;
+    width: 11.1%;
+    color: #FFFFFF;
+    background-color: #313131;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.fourth-row th{
+    text-align: center;
+    width: 11.1%;
+    color: #FFFFFF;
+    background-color: #313131;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.fifth-row th{
+    text-align: center;
+    width: 11.1%;
+    color: #FFFFFF;
+    background-color: #313131;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.blockh{
+    height: 20px;
+    width: 100%;
+}
+
+.blockv{
+    height: 100%;
+    width: 10px;
+}
+
+.one-four, .two-four, .three-four, .four-four, .five-four, .five-two, .five-three{
+    background-color: #F69906 !important;
+    color: #FFFFFF !important;
+}
+
+.numbers:hover{
+    background-color: #A0A0A0;
+    color: #000000;
+    cursor: pointer;
+}
+
+.signs:hover{
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.symbols:hover{
+    background-color: #FFFFFF !important;
+    color: #F69906 !important;
+}
+
+input{
+    width: 100%;
+    font-size: 32px;
+    text-align: right;
+    background-color: #FFFFFF;
+}

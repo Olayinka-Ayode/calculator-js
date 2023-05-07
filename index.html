@@ -5,11 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="./app.js" defer></script>
 </head>
-<body class="h-full">
-    <table class="bg-black h-96 w-72 m-auto flex justify-center items-center">
-        <input type="text">
-    </table>
+<body>
+    <div class="container">
+        <input type="text" disabled id="screen">
+        <table>
+            <div class="blockh"></div>
+            <tr class="first-row">
+                <td><div class="blockv"></div></td>
+                <th class="one-one signs" id="AC" onclick="onAc()">AC</th>
+                <td><div class="blockv"></div></td>
+                <th class="one-two signs" id="C" onclick="removeC()">C</th>
+                <td><div class="blockv"></div></td>
+                <th class="one-three signs" id="percent" onclick="percentage(); showValue('%')"><i class="fa-solid fa-percent"></i></th>
+                <td><div class="blockv"></div></td>
+                <th class="one-four symbols" id="divide" onclick="showValue(' / ')"><i class="fa-solid fa-divide"></i></th>
+                <td><div class="blockv"></div></td>
+            </tr>
+            <td><div class="blockh"></div></td>
+            <tr class="second-row">
+                <td><div class="blockv"></div></td>
+                <th class="two-one numbers" onclick="showValue(7)">7</th>
+                <td><div class="blockv"></div></td>
+                <th class="two-two numbers" onclick="showValue(8)">8</th>
+                <td><div class="blockv"></div></td>
+                <th class="two-three numbers" onclick="showValue(9)">9</th>
+                <td><div class="blockv"></div></td>
+                <th class="two-four symbols" onclick="showValue(' * ')" id="multiply"><i class="fa-solid fa-x"></i></th>
+            </tr>
+            <td><div class="blockh"></div></td>
+            <tr class="third-row">
+                <td><div class="blockv"></div></td>
+                <th class="three-one numbers" onclick="showValue(4)">4</th>
+                <td><div class="blockv"></div></td>
+                <th class="three-two numbers" onclick="showValue(5)">5</th>
+                <td><div class="blockv"></div></td>
+                <th class="three-three numbers" onclick="showValue(6)">6</th>
+                <td><div class="blockv"></div></td>
+                <th class="three-four symbols" id="minus" onclick="showValue(' - ')"><i class="fa-solid fa-minus"></i></th>
+            </tr>
+            <td><div class="blockh"></div></td>
+            <tr class="fourth-row">
+                <td><div class="blockv"></div></td>
+                <th class="four-one numbers" onclick="showValue(1)">1</th>
+                <td><div class="blockv"></div></td>
+                <th class="four-two numbers" onclick="showValue(2)">2</th>
+                <td><div class="blockv"></div></td>
+                <th class="four-three numbers" name="3" value="3" onclick="showValue(3)">3</th>
+                <td><div class="blockv"></div></td>
+                <th class="four-four symbols" id="plus" name="+" value="+" onclick="showValue(' + ')"><i class="fa-solid fa-plus"></i></th>
+            </tr>
+            <td><div class="blockh"></div></td>
+            <tr class="fifth-row">
+                <td><div class="blockv"></div></td>
+                <th class="five-one numbers" onclick="showValue('0')">0</th>
+                <td><div class="blockv"></div></td>
+                <th class="five-two symbols" onclick="showValue('.')">.</th>
+                <td><div class="blockv"></div></td>
+                <th class="five-three symbols" onclick="sqRoot()" id="sqr"><i class="fa-solid fa-square-root-alt"></i></th>
+                <td><div class="blockv"></div></td>
+                <th class="five-four symbols" id="equals" onclick="giveAnswer()"><i class="fa-solid fa-equals"></i></th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
