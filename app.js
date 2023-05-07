@@ -28,10 +28,21 @@ function showValue(e){
 }
 
 function sqRoot(){
-    screen.value = Math.sqrt(screen.value).toFixed(3)
+    ans = Math.sqrt(screen.value)
+    ans = parseFloat(ans)
+    if(Number.isInteger(ans)){
+        screen.value = ans.toFixed(0)
+    }else{
+        screen.value = ans.toFixed(3)
+    }
 }
 
 function giveAnswer(){
-    calcu = screen.value.split(" ");
-    screen.value = eval(screen.value).toFixed(3)
+    answer = eval(screen.value).toFixed(3)
+    answer = parseInt(answer)
+    if(Number.isInteger(answer)){
+        screen.value = answer.toFixed(0)
+    }else{
+        screen.value = answer.toFixed(3)
+    }
 }
