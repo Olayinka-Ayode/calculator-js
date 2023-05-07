@@ -9,7 +9,6 @@ const plus = document.getElementById("plus");
 const sqr = document.getElementById("sqr");
 const evalu = document.getElementById("equals");
 
-screen.value += "79"
 
 function removeC(){
     screen.value = screen.value.slice(0, screen.value.length - 1)
