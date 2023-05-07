@@ -39,7 +39,7 @@ function sqRoot(){
 
 function giveAnswer(){
     answer = eval(screen.value).toFixed(3)
-    answer = parseInt(answer)
+    answer = parseFloat(answer)
     if(Number.isInteger(answer)){
         screen.value = answer.toFixed(0)
     }else{
